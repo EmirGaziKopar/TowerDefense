@@ -4,9 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - projectile
-  - Ground
-  - GunRotation
+  - ajan
   layers:
   - Default
   - TransparentFX
