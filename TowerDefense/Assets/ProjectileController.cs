@@ -37,7 +37,7 @@ public class ProjectileController : MonoBehaviour
         {
             projectileShoot.time = 0f;
             time = 0;
-            Instantiate(Projectile, newprojectilePosition.position, newprojectilePosition.rotation);
+            Instantiate(Projectile, transform.position, transform.rotation);
 
         }
 
