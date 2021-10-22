@@ -4,37 +4,44 @@ using UnityEngine;
 
 public class ProjectileShoot : MonoBehaviour
 {
-    ShootControl shootControl;
-    [SerializeField] GameObject pointerShootControl;
-    Rigidbody rigidbody;
-    Transform GunTransform; 
+    new Rigidbody rigidbody;
+    Transform GunTransform;
+    
     public float time = 0f;
-    [SerializeField] float speed;
-    isGround isGround;
-    GameObject respawns;
+    [SerializeField] float speed;   
+    
+    float projectileLifeCycle;
 
-    [SerializeField] GameObject isGroundPointer;
+    
 
     public enum SelectGun
     {
         low,medium,hard
     }
+
     [SerializeField]SelectGun selectGun;
 
     private void Start()
     {
-        
 
-        shootControl = pointerShootControl.GetComponent<ShootControl>();
+
+        
         rigidbody = GetComponent<Rigidbody>();
 
         //GunTransform = GetComponent<Transform>();
 
-        if(selectGun == SelectGun.low)
+        if (selectGun == SelectGun.low)
         {
             GunTransform = GameObject.Find("GunRotation").GetComponent<Transform>();
         }
-        
+        if(selectGun == SelectGun.medium)
+        {
+            GunTransform = GameObject.Find("GunRotation2").GetComponent<Transform>();
+        }
+
+
+
+
 
 
 
@@ -42,14 +49,11 @@ public class ProjectileShoot : MonoBehaviour
 
     private void Update()
     {
-        //rigidbody.constraints = RigidbodyConstraints.FreezeRotationZ;
+        
         
         shoot();
         
-        /*if (Input.GetMouseButtonDown(0))
-        {
-            shoot();
-        }*/
+        
     }
 
     public void shoot()
@@ -60,16 +64,32 @@ public class ProjectileShoot : MonoBehaviour
             time += Time.deltaTime;
             //Burada neden transform deðerini mermiden deðil de silahtan aldýk:
             //çünkü mermi hareket halindeyken unity uzayýnda yer çekimi kuvvetine maruz kalýr ve top'un yönü sürekli olarak deðiþir bu nedenle top düzensiz hareketler sergiler.
+
             
-            if(selectGun == SelectGun.low)
+            if (selectGun == SelectGun.low)
             {
                 Vector3 a = new Vector3(-GunTransform.forward.x, 0f, -GunTransform.forward.z); //Topun karsiya gitmesini saglayan z.
                                                                                                //Vector3 a = new Vector3(-GunRotation.gunTransform.forward.x, 0f, -GunRotation.gunTransform.forward.z);
                 rigidbody.velocity = a * speed;
             }
-            
-            
+            if (selectGun == SelectGun.medium)
+            {
+                Vector3 a = new Vector3(-GunTransform.forward.x, 0f, -GunTransform.forward.z); //Topun karsiya gitmesini saglayan z.
+                                                                                               //Vector3 a = new Vector3(-GunRotation.gunTransform.forward.x, 0f, -GunRotation.gunTransform.forward.z);
+                rigidbody.velocity = a * speed;
+            }
+
+
         }
-        
+
+        projectileLifeCycle += Time.deltaTime;
+
+        if (projectileLifeCycle > 3)
+        {
+            Destroy(this.gameObject);
+            projectileLifeCycle = 0;
+        }
+
+
     }
 }
