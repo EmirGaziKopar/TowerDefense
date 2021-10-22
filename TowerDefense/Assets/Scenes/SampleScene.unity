@@ -153,8 +153,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Projectile: {fileID: 7573937615814782635, guid: 685d7bfc8f51b1244ae09a658a74bdde, type: 3}
+  ProjectileMedium: {fileID: 0}
+  ProjectileHard: {fileID: 0}
   newprojectilePosition: {fileID: 1592118226}
   attackSpeed: 1.01
+  attackSpeedMedium: 0
+  attackSpeedHard: 0
+  selectGun: 0
   isGrounded: 0
 --- !u!4 &441967132
 Transform:

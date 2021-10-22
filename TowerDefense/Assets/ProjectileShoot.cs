@@ -15,6 +15,12 @@ public class ProjectileShoot : MonoBehaviour
 
     [SerializeField] GameObject isGroundPointer;
 
+    public enum SelectGun
+    {
+        low,medium,hard
+    }
+    [SerializeField]SelectGun selectGun;
+
     private void Start()
     {
         
@@ -24,7 +30,11 @@ public class ProjectileShoot : MonoBehaviour
 
         //GunTransform = GetComponent<Transform>();
 
-        GunTransform = GameObject.Find("GunRotation").GetComponent<Transform>();
+        if(selectGun == SelectGun.low)
+        {
+            GunTransform = GameObject.Find("GunRotation").GetComponent<Transform>();
+        }
+        
 
 
 
@@ -50,9 +60,14 @@ public class ProjectileShoot : MonoBehaviour
             time += Time.deltaTime;
             //Burada neden transform deðerini mermiden deðil de silahtan aldýk:
             //çünkü mermi hareket halindeyken unity uzayýnda yer çekimi kuvvetine maruz kalýr ve top'un yönü sürekli olarak deðiþir bu nedenle top düzensiz hareketler sergiler.
-            Vector3 a = new Vector3(-GunTransform.forward.x, 0f, -GunTransform.forward.z); //Topun karsiya gitmesini saglayan z.
-            //Vector3 a = new Vector3(-GunRotation.gunTransform.forward.x, 0f, -GunRotation.gunTransform.forward.z);
-            rigidbody.velocity = a * speed;
+            
+            if(selectGun == SelectGun.low)
+            {
+                Vector3 a = new Vector3(-GunTransform.forward.x, 0f, -GunTransform.forward.z); //Topun karsiya gitmesini saglayan z.
+                                                                                               //Vector3 a = new Vector3(-GunRotation.gunTransform.forward.x, 0f, -GunRotation.gunTransform.forward.z);
+                rigidbody.velocity = a * speed;
+            }
+            
             
         }
         
