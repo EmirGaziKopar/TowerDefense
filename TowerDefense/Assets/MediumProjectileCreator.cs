@@ -28,7 +28,7 @@ public class MediumProjectileCreator : MonoBehaviour
             projectileShootMedium.time = 0f;
             time = 0;
             Instantiate(MediumProjectile, transform.position, transform.rotation);
-
+            CubeMovement.tekMermiTekHasarSayacý = 0;
         }
 
         
