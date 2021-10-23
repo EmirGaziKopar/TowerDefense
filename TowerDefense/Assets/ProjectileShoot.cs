@@ -70,13 +70,13 @@ public class ProjectileShoot : MonoBehaviour
             {
                 Vector3 a = new Vector3(-GunTransform.forward.x, 0f, -GunTransform.forward.z); //Topun karsiya gitmesini saglayan z.
                                                                                                //Vector3 a = new Vector3(-GunRotation.gunTransform.forward.x, 0f, -GunRotation.gunTransform.forward.z);
-                rigidbody.velocity = a * speed;
+                rigidbody.velocity = a * speed *LookAtTheEnemy.distance;
             }
             if (selectGun == SelectGun.medium)
             {
-                Vector3 a = new Vector3(-GunTransform.forward.x, 0f, -GunTransform.forward.z); //Topun karsiya gitmesini saglayan z.
+                Vector3 a = new Vector3(-GunTransform.forward.x, -0.005f, -GunTransform.forward.z); //Topun karsiya gitmesini saglayan z.
                                                                                                //Vector3 a = new Vector3(-GunRotation.gunTransform.forward.x, 0f, -GunRotation.gunTransform.forward.z);
-                rigidbody.velocity = a * speed;
+                rigidbody.velocity = a * speed *LookAtTheEnemy.distance;
             }
 
 

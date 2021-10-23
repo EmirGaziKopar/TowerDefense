@@ -10,8 +10,10 @@ public class LookAtTheEnemy : MonoBehaviour
     float z;
     bool isEnemy;
     Transform body;
+    Transform enemyBody;
     Rigidbody rigidbody;
-    [SerializeField] Transform enemy;
+    GameObject enemy;
+    public static float distance;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,22 +27,33 @@ public class LookAtTheEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (isEnemy == true)
         {
-            body.transform.LookAt(enemy);
+            enemyBody = enemy.GetComponent<Transform>();
+            body.transform.LookAt(enemyBody);
+            distance = Vector3.Distance(enemyBody.position, transform.position);
+            Debug.Log("Distance: " + distance);
         }
-        body.transform.LookAt(enemy);
+        
 
-        transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
+        
+        
+
+        transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0); //bu kod sayesinde silah zemine yapýþýyor ve aþaðý yukarý bakmýyor.
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    
+
+    private void OnTriggerStay(Collider other)
     {
-        if(other.gameObject.tag == "Enemy")
+        Debug.Log("Buraya girildi");
+        if (other.CompareTag("enemy"))
         {
             Debug.Log("Buraya girildi");
-            enemy = other.gameObject.transform.GetComponent<Transform>();
+            enemy = other.gameObject;
+
             isEnemy = true;
         }
         else

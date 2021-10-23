@@ -15,11 +15,12 @@ public class CubeMovement : MonoBehaviour
     void Update()
     {
         if (Input.GetKey(KeyCode.W)){
-            transform.Translate(-transform.forward*5f*Time.deltaTime);
+            transform.Translate(transform.right*5f*Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.S))
         {
-            transform.Translate(transform.forward * 5f * Time.deltaTime);
+            transform.Translate(-transform.right * 5f * Time.deltaTime);
         }
+        transform.Translate(-transform.right * 2f * Time.deltaTime);
     }
 }
