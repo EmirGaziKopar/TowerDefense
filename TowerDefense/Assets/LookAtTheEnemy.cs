@@ -5,12 +5,14 @@ using UnityEngine;
 public class LookAtTheEnemy : MonoBehaviour
 {
 
+    Quaternion neededRotation;
+    [SerializeField] float rotationSpeed;
     float x;
     float y;
     float z;
     bool isEnemy;
-    Transform body;
-    Transform enemyBody;
+    Transform body; //destination
+    Transform enemyBody; //source
     Rigidbody rigidbody;
     GameObject enemy;
     public static int sayac=0; //Obje destroy olmadan sayac = 0 olmalý
@@ -23,6 +25,7 @@ public class LookAtTheEnemy : MonoBehaviour
         y = transform.rotation.y;
         z = transform.rotation.z;
         rigidbody = GetComponent<Rigidbody>();
+
     }
 
     // Update is called once per frame
@@ -31,11 +34,33 @@ public class LookAtTheEnemy : MonoBehaviour
         
         if (isEnemy == true)
         {
-            enemyBody = enemy.GetComponent<Transform>();
-            body.transform.LookAt(enemyBody);
+
             
-            distance = Vector3.Distance(enemyBody.position, transform.position);
-            Debug.Log("Distance: " + distance);
+            
+            if(enemy != null) //eðer enemy null olduðu durumlarda da referans alma kodu çalýþýrsa referans alýnamaz ve hata döner. O nedenle burada bu kontrolü yapýyoruz.
+            {
+                enemyBody = enemy.GetComponent<Transform>();
+
+                //direction = destination(enemy) - source(Our Gun)
+                Vector3 direction = enemyBody.position - transform.position;
+
+                //access our current rotation = Quaternion Look Rotation
+                neededRotation = Quaternion.LookRotation(direction);
+
+                //for slowly turn 
+                transform.rotation = Quaternion.Slerp(this.transform.rotation, neededRotation, Time.deltaTime * rotationSpeed);
+                
+                distance = Vector3.Distance(enemyBody.position, transform.position);
+                Debug.Log("Distance: " + distance);
+            }
+            
+            
+
+            //body.transform.LookAt(enemyBody);
+
+
+
+            
         }
         
 
