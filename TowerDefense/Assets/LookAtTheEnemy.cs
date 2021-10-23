@@ -13,6 +13,7 @@ public class LookAtTheEnemy : MonoBehaviour
     Transform enemyBody;
     Rigidbody rigidbody;
     GameObject enemy;
+    public static int sayac=0; //Obje destroy olmadan sayac = 0 olmalý
     public static float distance;
     // Start is called before the first frame update
     void Start()
@@ -32,6 +33,7 @@ public class LookAtTheEnemy : MonoBehaviour
         {
             enemyBody = enemy.GetComponent<Transform>();
             body.transform.LookAt(enemyBody);
+            
             distance = Vector3.Distance(enemyBody.position, transform.position);
             Debug.Log("Distance: " + distance);
         }
@@ -49,16 +51,31 @@ public class LookAtTheEnemy : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         Debug.Log("Buraya girildi");
-        if (other.CompareTag("enemy"))
+        if (other.CompareTag("enemy") && sayac == 0)
         {
+            sayac++;
             Debug.Log("Buraya girildi");
             enemy = other.gameObject;
-
             isEnemy = true;
         }
-        else
+        /*else
         {
             isEnemy = false;
+        }*/
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        Debug.Log("Buraya girildi");
+        if (other.CompareTag("enemy"))
+        {
+            sayac = 0;
+            Debug.Log("Buraya girildi Exit");
+            enemy = other.gameObject;
+            isEnemy = false;
         }
+        /*else
+        {
+            isEnemy = false;
+        }*/
     }
 }
