@@ -14,7 +14,7 @@ public class ProjectileShoot : MonoBehaviour
 
     public enum SelectGun
     {
-        low,medium,hard
+        low,medium,notBad,hard,veryHard
     }
 
 
@@ -81,6 +81,13 @@ public class ProjectileShoot : MonoBehaviour
                 Vector3 a = new Vector3(-transform.forward.x, -0.005f, -transform.forward.z); //Topun karsiya gitmesini saglayan z.
                                                                                                //Vector3 a = new Vector3(-GunRotation.gunTransform.forward.x, 0f, -GunRotation.gunTransform.forward.z);
                 rigidbody.velocity = a * speed *LookAtTheEnemy.distance;
+            }
+
+            if (selectGun == SelectGun.notBad)
+            {
+                Vector3 a = new Vector3(transform.forward.x, -0.1f, transform.forward.z); //Topun karsiya gitmesini saglayan z.
+                                                                                         //Vector3 a = new Vector3(-GunRotation.gunTransform.forward.x, 0f, -GunRotation.gunTransform.forward.z);
+                rigidbody.velocity = a * speed * 5;
             }
 
             if (selectGun == SelectGun.hard)
