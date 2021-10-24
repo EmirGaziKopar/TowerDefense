@@ -102,6 +102,8 @@ public class LookAtTheEnemy : MonoBehaviour
             enemy = other.gameObject;
             isEnemy = true;
             sayac++;
+
+
         }
         /*else
         {

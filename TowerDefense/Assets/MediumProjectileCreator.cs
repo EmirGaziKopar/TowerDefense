@@ -12,6 +12,7 @@ public class MediumProjectileCreator : MonoBehaviour
     [SerializeField] float attackSpeed;
     float time;
     float projectileLifeCycle;
+    bool controlEnemy; //alan içersinde düþman varsa mermi üretilecek
 
     // Start is called before the first frame update
     void Start()
@@ -23,14 +24,34 @@ public class MediumProjectileCreator : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        if (time > attackSpeed)
-        {
-            projectileShootMedium.time = 0f;
-            time = 0;
-            Instantiate(MediumProjectile, transform.position, transform.rotation);
-            //EnemyHp.tekMermiTekHasarSayacý = 0;
-        }
+        
 
         
+    }
+
+    //Buraya yazmayý gözden geçir kasmaya neden olabilir.
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "enemy")
+        {
+            controlEnemy = true;
+            if (time > attackSpeed)
+            {
+                projectileShootMedium.time = 0f;
+                Instantiate(MediumProjectile, transform.position, transform.rotation);
+                time = 0;
+
+                //EnemyHp.tekMermiTekHasarSayacý = 0;
+            }
+
+        }
+
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "enemy")
+        {
+            controlEnemy = false;
+        }
     }
 }
