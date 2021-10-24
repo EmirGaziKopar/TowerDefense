@@ -95,7 +95,7 @@ public class ProjectileShoot : MonoBehaviour
 
         projectileLifeCycle += Time.deltaTime;
 
-        if (projectileLifeCycle > 3)
+        if (projectileLifeCycle > 1)
         {
             Destroy(this.gameObject);
             projectileLifeCycle = 0;
