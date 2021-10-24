@@ -85,9 +85,9 @@ public class ProjectileShoot : MonoBehaviour
 
             if (selectGun == SelectGun.notBad)
             {
-                Vector3 a = new Vector3(transform.forward.x, -0.1f, transform.forward.z); //Topun karsiya gitmesini saglayan z.
+                Vector3 a = new Vector3(transform.forward.x, -0.05f, transform.forward.z); //Topun karsiya gitmesini saglayan z.
                                                                                          //Vector3 a = new Vector3(-GunRotation.gunTransform.forward.x, 0f, -GunRotation.gunTransform.forward.z);
-                rigidbody.velocity = a * speed * 5;
+                rigidbody.velocity = a * speed * LookAtTheEnemy.distance;
             }
 
             if (selectGun == SelectGun.hard)
