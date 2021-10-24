@@ -38,6 +38,10 @@ public class ProjectileShoot : MonoBehaviour
         {
             GunTransform = GameObject.Find("GunRotation2").GetComponent<Transform>();
         }
+        if (selectGun == SelectGun.hard)
+        {
+            GunTransform = GameObject.Find("GunRotation3").GetComponent<Transform>();
+        }
 
 
 
@@ -77,6 +81,13 @@ public class ProjectileShoot : MonoBehaviour
                 Vector3 a = new Vector3(-GunTransform.forward.x, -0.005f, -GunTransform.forward.z); //Topun karsiya gitmesini saglayan z.
                                                                                                //Vector3 a = new Vector3(-GunRotation.gunTransform.forward.x, 0f, -GunRotation.gunTransform.forward.z);
                 rigidbody.velocity = a * speed *LookAtTheEnemy.distance;
+            }
+
+            if (selectGun == SelectGun.hard)
+            {
+                Vector3 a = new Vector3(GunTransform.forward.x, -0.005f, GunTransform.forward.z); //Topun karsiya gitmesini saglayan z.
+                                                                                                    //Vector3 a = new Vector3(-GunRotation.gunTransform.forward.x, 0f, -GunRotation.gunTransform.forward.z);
+                rigidbody.velocity = a * speed * LookAtTheEnemy.distance;
             }
 
 
