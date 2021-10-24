@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class ProjectileShoot : MonoBehaviour
 {
-    new Rigidbody rigidbody;
-    Transform GunTransform;
-    
+    new Rigidbody rigidbody;   
     public float time = 0f;
     [SerializeField] float speed;   
     
@@ -18,6 +16,8 @@ public class ProjectileShoot : MonoBehaviour
     {
         low,medium,hard
     }
+
+
 
     [SerializeField]SelectGun selectGun;
 
@@ -32,15 +32,15 @@ public class ProjectileShoot : MonoBehaviour
 
         if (selectGun == SelectGun.low)
         {
-            GunTransform = GameObject.Find("GunRotation").GetComponent<Transform>();
+            //ozelleþtirme
         }
         if(selectGun == SelectGun.medium)
         {
-            GunTransform = GameObject.Find("GunRotation2").GetComponent<Transform>();
+            //ozelleþtirme
         }
         if (selectGun == SelectGun.hard)
         {
-            GunTransform = GameObject.Find("GunRotation3").GetComponent<Transform>();
+            //ozelleþtirme
         }
 
 
@@ -72,20 +72,20 @@ public class ProjectileShoot : MonoBehaviour
             
             if (selectGun == SelectGun.low)
             {
-                Vector3 a = new Vector3(-GunTransform.forward.x, 0f, -GunTransform.forward.z); //Topun karsiya gitmesini saglayan z.
+                Vector3 a = new Vector3(-transform.forward.x, 0f, -transform.forward.z); //Topun karsiya gitmesini saglayan z.
                                                                                                //Vector3 a = new Vector3(-GunRotation.gunTransform.forward.x, 0f, -GunRotation.gunTransform.forward.z);
                 rigidbody.velocity = a * speed *LookAtTheEnemy.distance;
             }
             if (selectGun == SelectGun.medium)
             {
-                Vector3 a = new Vector3(-GunTransform.forward.x, -0.005f, -GunTransform.forward.z); //Topun karsiya gitmesini saglayan z.
+                Vector3 a = new Vector3(-transform.forward.x, -0.005f, -transform.forward.z); //Topun karsiya gitmesini saglayan z.
                                                                                                //Vector3 a = new Vector3(-GunRotation.gunTransform.forward.x, 0f, -GunRotation.gunTransform.forward.z);
                 rigidbody.velocity = a * speed *LookAtTheEnemy.distance;
             }
 
             if (selectGun == SelectGun.hard)
             {
-                Vector3 a = new Vector3(GunTransform.forward.x, -0.1f, GunTransform.forward.z); //Topun karsiya gitmesini saglayan z.
+                Vector3 a = new Vector3(transform.forward.x, -0.1f, transform.forward.z); //Topun karsiya gitmesini saglayan z.
                                                                                                     //Vector3 a = new Vector3(-GunRotation.gunTransform.forward.x, 0f, -GunRotation.gunTransform.forward.z);
                 rigidbody.velocity = a * speed * LookAtTheEnemy.distance;
             }

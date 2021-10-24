@@ -27,11 +27,8 @@ public class EnemyHp : MonoBehaviour
             characterHp -= 25; //gelen mermi tag'ý hangisiyse ona göre damage vurmasý ayarlanabilir.
             if (characterHp <= 0)
             {
-                //sadece bir düþmana fokus olmayý saðlayan sayac
-
-                
+                //sadece bir düþmana fokus olmayý saðlayan sayac                
                 Destroy(this.gameObject);
-
                 isDead = true;
             }
 

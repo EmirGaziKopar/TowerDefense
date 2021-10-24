@@ -10,10 +10,12 @@ public class HardProjectileCreator : MonoBehaviour
     [Range(0, 2)]
     [SerializeField] float attackSpeed;
     float time;
+    bool controlEnemy; //alan içersinde düþman varsa mermi üretilecek
 
     // Start is called before the first frame update
     void Start()
     {
+        controlEnemy = false;
         projectileShootMedium = HardProjectile.GetComponent<ProjectileShoot>(); //hard projectile içersindeki zamana ulaþmak için
     }
 
@@ -25,8 +27,25 @@ public class HardProjectileCreator : MonoBehaviour
         {
             projectileShootMedium.time = 0f;
             time = 0;
-            Instantiate(HardProjectile, transform.position, transform.rotation);
+            if (controlEnemy == true)
+            {
+                Instantiate(HardProjectile, transform.position, transform.rotation);
+            }
             //EnemyHp.tekMermiTekHasarSayacý = 0;
+        }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "enemy")
+        {
+            controlEnemy = true;
+        }     
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "enemy")
+        {
+            controlEnemy = false;
         }
     }
 }
