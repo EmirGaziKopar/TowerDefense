@@ -26,7 +26,7 @@ public class HardProjectileCreator : MonoBehaviour
             projectileShootMedium.time = 0f;
             time = 0;
             Instantiate(HardProjectile, transform.position, transform.rotation);
-            CubeMovement.tekMermiTekHasarSayacý = 0;
+            //EnemyHp.tekMermiTekHasarSayacý = 0;
         }
     }
 }

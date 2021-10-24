@@ -85,7 +85,7 @@ public class ProjectileShoot : MonoBehaviour
 
             if (selectGun == SelectGun.hard)
             {
-                Vector3 a = new Vector3(GunTransform.forward.x, -0.005f, GunTransform.forward.z); //Topun karsiya gitmesini saglayan z.
+                Vector3 a = new Vector3(GunTransform.forward.x, -0.1f, GunTransform.forward.z); //Topun karsiya gitmesini saglayan z.
                                                                                                     //Vector3 a = new Vector3(-GunRotation.gunTransform.forward.x, 0f, -GunRotation.gunTransform.forward.z);
                 rigidbody.velocity = a * speed * LookAtTheEnemy.distance;
             }
@@ -102,5 +102,18 @@ public class ProjectileShoot : MonoBehaviour
         }
 
 
+    }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "enemy")
+        {
+            Destroy(this.gameObject);
+        }
+        if(collision.gameObject.tag == "Ground")
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
