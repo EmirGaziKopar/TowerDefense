@@ -35,7 +35,7 @@ public class ProjectileController : MonoBehaviour
             projectileShoot.time = 0f;
             time = 0;
             Instantiate(Projectile, transform.position, transform.rotation);
-            EnemyHp.tekMermiTekHasarSayacý = 0; //her mermi üretildiðinde 0km'dir 1'olan miladýný doldurur.
+            //EnemyHp.tekMermiTekHasarSayacý = 0; //her mermi üretildiðinde 0km'dir 1'olan miladýný doldurur.
 
         }
 

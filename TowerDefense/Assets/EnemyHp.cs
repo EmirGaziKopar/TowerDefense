@@ -11,12 +11,12 @@ public class EnemyHp : MonoBehaviour
     public static bool isDead;
 
     public static float tekMermiTekHasarSayacý = 0;
-    public float characterHp = 100;
+    public float characterHp = 1000;
     // Start is called before the first frame update
     void Start()
     {
-        characterHp = 100;
-        
+
+        isDead = false;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -27,10 +27,12 @@ public class EnemyHp : MonoBehaviour
             characterHp -= 25; //gelen mermi tag'ý hangisiyse ona göre damage vurmasý ayarlanabilir.
             if (characterHp <= 0)
             {
-                 //sadece bir düþmana fokus olmayý saðlayan sayac
+                //sadece bir düþmana fokus olmayý saðlayan sayac
+
+                
+                Destroy(this.gameObject);
 
                 isDead = true;
-                Destroy(this.gameObject);
             }
 
         }

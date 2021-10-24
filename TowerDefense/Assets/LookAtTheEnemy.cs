@@ -75,20 +75,33 @@ public class LookAtTheEnemy : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (EnemyHp.isDead == true)
+        if (other.CompareTag("Gun")) //kesisim noktasýndayýz demektir kesiþim noktasýnda ölen objeler için static bir ölüm haberi gereklidir ki her yerden bilgi alabilelim.
         {
-            sayac = 0; //eðer öldüyse sayac degerim 0 olsun ki tekrar fokus olabileyim
-            Debug.Log("Buraya girildi");
-            EnemyHp.isDead = false;
+            sayac = 0;
+            Debug.Log("Kesisim Bolgesinde");
+            if (EnemyHp.isDead == true)
+            {
+                
+
+                sayac = 0; //eðer öldüyse sayac degerim 0 olsun ki tekrar fokus olabileyim
+                Debug.Log("Kesisim Bolgesinde");
+                EnemyHp.isDead = false;
+                
+
+            }
         }
+        
         Debug.Log("Buraya girildi");
         
+        //sayac 0 olursa ve o sýrada alan içerisinde herhangi bir düþman yoksa sayac direk 1 olucak ve bir düþman ölene kadar silah kitlenecek.
         if (other.CompareTag("enemy") && sayac == 0)
         {
-            sayac++;
+
+            
             Debug.Log("Buraya girildi");
             enemy = other.gameObject;
             isEnemy = true;
+            sayac++;
         }
         /*else
         {
