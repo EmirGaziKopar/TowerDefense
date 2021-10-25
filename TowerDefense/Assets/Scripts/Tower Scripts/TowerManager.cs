@@ -23,7 +23,7 @@ public class TowerManager : MonoBehaviour
         Debug.Log("carpti");
         if (collision.gameObject.CompareTag("ajan"))
         {
-           // Destroy(collision.gameObject);
+           Destroy(collision.gameObject);
             Debug.Log("carpisma basarili");
             gameController.GetComponent<GameController>().decreaseHP(0.1f);
             GameController.health -= 1f;

@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 0
-  speed: 0.78
+  speed: 0.61
   ayarlaSil: 1.05
   selectGun: 1
 --- !u!54 &4888941845839746202
