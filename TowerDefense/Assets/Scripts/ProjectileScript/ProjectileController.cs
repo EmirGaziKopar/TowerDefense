@@ -4,44 +4,50 @@ using UnityEngine;
 
 public class ProjectileController : MonoBehaviour
 {
-    ProjectileShoot projectileShoot;
-    [SerializeField] GameObject Projectile; //mermi
     [SerializeField] Transform newprojectilePosition;
-
+    [SerializeField] GameObject soBadProjectile; //mermi
+    ProjectileShoot projectileShootSoBad;
     [Range(0, 2)]
     [SerializeField] float attackSpeed;
-    
-    //
-    //Vector3(276.369263,0,0)
-    //Vector3(499.770996,-48.1041679,542.821655)
     float time;
-    //butun projectile'larý burada kontrol et enum kullan.
-    // Start is called before the first frame update
+    bool controlEnemy; //alan içersinde düþman varsa mermi üretilecek
+    
 
+    // Start is called before the first frame update
     void Start()
     {
- 
-        projectileShoot = Projectile.GetComponent<ProjectileShoot>();
-       
+        projectileShootSoBad = soBadProjectile.GetComponent<ProjectileShoot>(); //hard projectile içersindeki zamana ulaþmak için
     }
-    
 
     // Update is called once per frame
     void Update()
     {
         time += Time.deltaTime;
-        if (time > attackSpeed)
-        {
-            projectileShoot.time = 0f;
-            time = 0;
-            Instantiate(Projectile, transform.position, transform.rotation);
-            //EnemyHp.tekMermiTekHasarSayacý = 0; //her mermi üretildiðinde 0km'dir 1'olan miladýný doldurur.
-
-        }
-
         
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "enemy")
+        {
+            controlEnemy = true;
+            if (time > attackSpeed)
+            {
+                projectileShootSoBad.time = 0f;
+                Instantiate(soBadProjectile, transform.position, transform.rotation);
+                time = 0;
 
-
+                //EnemyHp.tekMermiTekHasarSayacý = 0;
+            }
+            
+        }
+        
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "enemy")
+        {
+            controlEnemy = false;
+        }
     }
 
     

@@ -112,7 +112,7 @@ MonoBehaviour:
   time: 0
   speed: 20
   ayarlaSil: 0
-  selectGun: 0
+  selectGun: 2
 --- !u!54 &818156706295402040
 Rigidbody:
   m_ObjectHideFlags: 0
