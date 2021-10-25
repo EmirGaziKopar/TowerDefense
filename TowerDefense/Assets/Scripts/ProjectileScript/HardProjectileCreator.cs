@@ -11,6 +11,8 @@ public class HardProjectileCreator : MonoBehaviour
     [SerializeField] float attackSpeed;
     float time;
     bool controlEnemy; //alan içersinde düþman varsa mermi üretilecek
+    [Range(0,5)]
+    [SerializeField]float ayarlaSil;
 
     // Start is called before the first frame update
     void Start()

@@ -111,7 +111,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: 0
   speed: 20
-  selectGun: 2
+  ayarlaSil: 0
+  selectGun: 0
 --- !u!54 &818156706295402040
 Rigidbody:
   m_ObjectHideFlags: 0

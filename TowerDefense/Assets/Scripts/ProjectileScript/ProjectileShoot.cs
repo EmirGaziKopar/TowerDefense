@@ -9,12 +9,13 @@ public class ProjectileShoot : MonoBehaviour
     [SerializeField] float speed;   
     
     float projectileLifeCycle;
+    [Range(0, 5)]
+    [SerializeField] float ayarlaSil;
 
-    
 
     public enum SelectGun
     {
-        low,medium,notBad,hard,veryHard
+        soBad,veryLow, low,medium,hard,veryHard
     }
 
 
@@ -30,6 +31,10 @@ public class ProjectileShoot : MonoBehaviour
 
         //GunTransform = GetComponent<Transform>();
 
+        if (selectGun == SelectGun.veryLow)
+        {
+            //ozelleþtirme
+        }
         if (selectGun == SelectGun.low)
         {
             //ozelleþtirme
@@ -69,7 +74,19 @@ public class ProjectileShoot : MonoBehaviour
             //Burada neden transform deðerini mermiden deðil de silahtan aldýk:
             //çünkü mermi hareket halindeyken unity uzayýnda yer çekimi kuvvetine maruz kalýr ve top'un yönü sürekli olarak deðiþir bu nedenle top düzensiz hareketler sergiler.
 
-            
+            if (selectGun == SelectGun.soBad)
+            {
+                Vector3 a = new Vector3(transform.forward.x, -0.05f, transform.forward.z); //Topun karsiya gitmesini saglayan z.
+                                                                                           //Vector3 a = new Vector3(-GunRotation.gunTransform.forward.x, 0f, -GunRotation.gunTransform.forward.z);
+                rigidbody.velocity = a * speed * LookAtTheEnemy.distance;
+            }
+
+            if (selectGun == SelectGun.veryLow)
+            {
+                Vector3 a = new Vector3(transform.forward.x, ayarlaSil, transform.forward.z); //Topun karsiya gitmesini saglayan z.
+                                                                                         //Vector3 a = new Vector3(-GunRotation.gunTransform.forward.x, 0f, -GunRotation.gunTransform.forward.z);
+                rigidbody.velocity = a * speed * LookAtTheEnemy.distance; //uzaklýkla doðru orantýlý atýþ hýzý artar
+            }
             if (selectGun == SelectGun.low)
             {
                 Vector3 a = new Vector3(-transform.forward.x, 0f, -transform.forward.z); //Topun karsiya gitmesini saglayan z.
@@ -83,12 +100,7 @@ public class ProjectileShoot : MonoBehaviour
                 rigidbody.velocity = a * speed *LookAtTheEnemy.distance;
             }
 
-            if (selectGun == SelectGun.notBad)
-            {
-                Vector3 a = new Vector3(transform.forward.x, -0.05f, transform.forward.z); //Topun karsiya gitmesini saglayan z.
-                                                                                         //Vector3 a = new Vector3(-GunRotation.gunTransform.forward.x, 0f, -GunRotation.gunTransform.forward.z);
-                rigidbody.velocity = a * speed * LookAtTheEnemy.distance;
-            }
+            
 
             if (selectGun == SelectGun.hard)
             {
@@ -100,13 +112,28 @@ public class ProjectileShoot : MonoBehaviour
 
         }
 
-        projectileLifeCycle += Time.deltaTime;
-
-        if (projectileLifeCycle > 1)
+        if(selectGun != SelectGun.veryLow) //VeryLow Kategorisindeki silah havan olduðu için ona daha uzun süre vermeliyiz
         {
-            Destroy(this.gameObject);
-            projectileLifeCycle = 0;
+            projectileLifeCycle += Time.deltaTime;
+
+            if (projectileLifeCycle > 1)
+            {
+                Destroy(this.gameObject);
+                projectileLifeCycle = 0;
+            }
         }
+        if (selectGun == SelectGun.veryLow) //VeryLow Kategorisindeki silah havan olduðu için ona daha uzun süre vermeliyiz
+        {
+            projectileLifeCycle += Time.deltaTime;
+
+            if (projectileLifeCycle > 4)
+            {
+                Destroy(this.gameObject);
+                projectileLifeCycle = 0;
+            }
+        }
+
+
 
 
     }
