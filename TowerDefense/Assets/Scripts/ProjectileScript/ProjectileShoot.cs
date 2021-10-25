@@ -89,13 +89,13 @@ public class ProjectileShoot : MonoBehaviour
             }
             if (selectGun == SelectGun.low)
             {
-                Vector3 a = new Vector3(-transform.forward.x, 0f, -transform.forward.z); //Topun karsiya gitmesini saglayan z.
+                Vector3 a = new Vector3(transform.forward.x, -0.1f, transform.forward.z); //Topun karsiya gitmesini saglayan z.
                                                                                                //Vector3 a = new Vector3(-GunRotation.gunTransform.forward.x, 0f, -GunRotation.gunTransform.forward.z);
                 rigidbody.velocity = a * speed *LookAtTheEnemy.distance;
             }
             if (selectGun == SelectGun.medium)
             {
-                Vector3 a = new Vector3(-transform.forward.x, -0.005f, -transform.forward.z); //Topun karsiya gitmesini saglayan z.
+                Vector3 a = new Vector3(transform.forward.x, -0.1f, transform.forward.z); //Topun karsiya gitmesini saglayan z.
                                                                                                //Vector3 a = new Vector3(-GunRotation.gunTransform.forward.x, 0f, -GunRotation.gunTransform.forward.z);
                 rigidbody.velocity = a * speed *LookAtTheEnemy.distance;
             }
@@ -126,7 +126,7 @@ public class ProjectileShoot : MonoBehaviour
         {
             projectileLifeCycle += Time.deltaTime;
 
-            if (projectileLifeCycle > 4)
+            if (projectileLifeCycle > 3)
             {
                 Destroy(this.gameObject);
                 projectileLifeCycle = 0;

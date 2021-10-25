@@ -127,8 +127,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 0
-  speed: 80
-  selectGun: 1
+  speed: 10
+  ayarlaSil: 0
+  selectGun: 3
 --- !u!1 &7918608172555880632
 GameObject:
   m_ObjectHideFlags: 0

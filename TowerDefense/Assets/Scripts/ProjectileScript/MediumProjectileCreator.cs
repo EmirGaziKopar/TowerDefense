@@ -38,6 +38,7 @@ public class MediumProjectileCreator : MonoBehaviour
             if (time > attackSpeed)
             {
                 projectileShootMedium.time = 0f;
+                Debug.Log("Mermi üretildi");
                 Instantiate(MediumProjectile, transform.position, transform.rotation);
                 time = 0;
 
