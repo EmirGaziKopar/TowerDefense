@@ -554,6 +554,7 @@ GameObject:
   - component: {fileID: 8531545159112224560}
   - component: {fileID: 6188050417746612562}
   - component: {fileID: 1883577278843748794}
+  - component: {fileID: 7922156087903748856}
   m_Layer: 0
   m_Name: GunMainTransparan
   m_TagString: Gun
@@ -645,6 +646,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7922156087903748856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5750280665360078540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334e3d6ea0bcd3449ba47a903ee1832a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5750280665440941428
 GameObject:
   m_ObjectHideFlags: 0
