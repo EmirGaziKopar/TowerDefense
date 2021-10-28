@@ -11,6 +11,9 @@ TagManager:
   - Enemy
   - enemy
   - Gun
+  - Zemin
+  - ucak
+  - tank
   layers:
   - Default
   - TransparentFX
@@ -18,7 +21,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Ground
   - 
   - 
   - 

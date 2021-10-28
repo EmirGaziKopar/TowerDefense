@@ -29,7 +29,7 @@ public class ReviewTurrets : MonoBehaviour
     {
         if (other.gameObject != null && !other.gameObject.CompareTag("Zemin"))
         {
-
+            Debug.Log("Buraya yapamazsýn");
             GetComponent<MeshRenderer>().material.color = Color.red;
             canCreat = false;
 

@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 2145482775678337397}
   - component: {fileID: 2145482775678337290}
   - component: {fileID: 2145482775678337291}
+  - component: {fileID: -8479026887318349531}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: ajan
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,3 +134,16 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &-8479026887318349531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145482775678337288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe31ac527545c814aaefabaef1cdec7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterHp: 300

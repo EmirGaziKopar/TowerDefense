@@ -21,7 +21,7 @@ public class TowerManager : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("carpti");
-        if (collision.gameObject.CompareTag("ajan"))
+        if (collision.gameObject.CompareTag("enemy"))
         {
            Destroy(collision.gameObject);
             Debug.Log("carpisma basarili");

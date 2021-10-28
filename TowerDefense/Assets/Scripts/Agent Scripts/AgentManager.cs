@@ -59,7 +59,7 @@ public class AgentManager : MonoBehaviour
                         {
 
 
-                            Instantiate(Agent[i], new Vector3(-78f, -0.72f, 32f), Quaternion.identity);
+                            Instantiate(Agent[i], new Vector3(22.4200001f, -30.4400005f, 20.8799992f), Quaternion.identity);
                            
                              
                             zaman = 0f;
