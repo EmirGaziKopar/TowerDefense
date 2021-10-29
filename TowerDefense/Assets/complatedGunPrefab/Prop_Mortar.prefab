@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8689606827211392349}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: L_KEY.Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6983736222469758368}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cam2_A4landscape_842x595.Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4219011533099840145}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cam1_A4portrait_595x842.Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 4415217238799038696}
   - component: {fileID: 4415217238799038703}
   - component: {fileID: 4415217238799038702}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ProjectilePosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 4415217239594872392}
   - component: {fileID: 4415217239594872399}
   - component: {fileID: 4415217239594872398}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Head
   m_TagString: Gun
   m_Icon: {fileID: 0}
@@ -256,7 +256,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1220698144925053801}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: L_FILL.Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 6286494856763756968}
   - component: {fileID: 7212047198123807576}
   - component: {fileID: 1611032286354867167}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Prop_Mortar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -375,7 +375,7 @@ GameObject:
   - component: {fileID: 259114581004533906}
   - component: {fileID: 6834178911245664965}
   - component: {fileID: 4806675950049851118}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mortar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -454,7 +454,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6008332150234190188}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: L_RIM.Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}

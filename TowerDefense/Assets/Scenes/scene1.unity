@@ -4799,7 +4799,7 @@ GameObject:
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: a
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4890,9 +4890,9 @@ MonoBehaviour:
   secToMaxSpeed: 50
   zoomSpeed: 5
   enableMovementLimits: 0
-  heightLimit: {x: 1, y: 1}
-  lenghtLimit: {x: 1, y: 1}
-  widthLimit: {x: 1, y: 1}
+  heightLimit: {x: 100, y: 100}
+  lenghtLimit: {x: 200, y: 200}
+  widthLimit: {x: 500, y: 500}
   rotationEnabled: 0
   rotateSpeed: 0
 --- !u!1 &964999008

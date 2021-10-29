@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8420170138088747358}
   - component: {fileID: 6650153088157513027}
   - component: {fileID: 2077892211077870964}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: base1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 32458383266894566}
   - component: {fileID: 146197971399941762}
   - component: {fileID: 8197087419230056773}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: trunnion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 6876247115870048637}
   - component: {fileID: 6487770508021928177}
   - component: {fileID: 875129265693669592}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 3665967431177501850}
   - component: {fileID: 3665967431177501851}
   - component: {fileID: 3665967431177501925}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ProjectilePosition
   m_TagString: projectile
   m_Icon: {fileID: 0}
@@ -330,7 +330,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3665967432258313076}
   - component: {fileID: -8447710123601360585}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -379,7 +379,7 @@ GameObject:
   - component: {fileID: 3665967432757388565}
   - component: {fileID: 3665967432757388554}
   - component: {fileID: 3665967432757388564}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Head
   m_TagString: Gun
   m_Icon: {fileID: 0}
@@ -461,7 +461,7 @@ GameObject:
   - component: {fileID: 738998263723771917}
   - component: {fileID: 8883121453707286085}
   - component: {fileID: 5882866577412244380}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -543,7 +543,7 @@ GameObject:
   - component: {fileID: 2334127188196260590}
   - component: {fileID: 5899724821698149522}
   - component: {fileID: 8254493572841923331}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: barrel1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -624,7 +624,7 @@ GameObject:
   - component: {fileID: 691324331957722484}
   - component: {fileID: 884146418673069501}
   - component: {fileID: 6265210580708961084}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: body1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -705,7 +705,7 @@ GameObject:
   - component: {fileID: 5501448347164575265}
   - component: {fileID: 275593838124293313}
   - component: {fileID: 7453211772566480192}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: trunnion1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -786,7 +786,7 @@ GameObject:
   - component: {fileID: 7222295902365698997}
   - component: {fileID: 3932072767006742087}
   - component: {fileID: 2024220988701897965}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: base_low
   m_TagString: Untagged
   m_Icon: {fileID: 0}

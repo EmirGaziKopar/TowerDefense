@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 377894607161027374}
   - component: {fileID: 9092636435030808931}
   - component: {fileID: -6843935011882499471}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: projectile
   m_TagString: projectile
   m_Icon: {fileID: 0}
@@ -248,7 +248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7277440116728143408}
   - component: {fileID: 7926944130932713565}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BombDamage
   m_TagString: Untagged
   m_Icon: {fileID: 0}

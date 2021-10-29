@@ -12,7 +12,7 @@ public class ProjectileShoot : MonoBehaviour
     [Range(0, 5)]
     [SerializeField] float ayarlaSil;
 
-    //so bad, medium , very low , hard
+    //so bad, medium , very low , low,  hard
     public enum SelectGun
     {
         soBad,veryLow, low,medium,hard,veryHard
@@ -76,7 +76,7 @@ public class ProjectileShoot : MonoBehaviour
 
             if (selectGun == SelectGun.soBad)
             {
-                Vector3 a = new Vector3(-transform.forward.x, -0.1f, -transform.forward.z); //Topun karsiya gitmesini saglayan z.
+                Vector3 a = new Vector3(transform.forward.x, 0.01f, transform.forward.z); //Topun karsiya gitmesini saglayan z.
                                                                                             //Vector3 a = new Vector3(-GunRotation.gunTransform.forward.x, 0f, -GunRotation.gunTransform.forward.z);
                 rigidbody.velocity = a * speed * LookAtTheEnemy.distance;
             }

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4888941845839746202}
   - component: {fileID: 8754463954162777458}
   - component: {fileID: 6925932368308754945}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Projectile
   m_TagString: projectile
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ TrailRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8109241447673142144}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

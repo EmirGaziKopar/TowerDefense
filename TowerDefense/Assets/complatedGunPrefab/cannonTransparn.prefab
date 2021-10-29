@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8336631790139600342}
   - component: {fileID: 2029027078206195036}
   - component: {fileID: 662648764742236146}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: trunnion3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 1286413492275022314}
   - component: {fileID: 7552743552812439138}
   - component: {fileID: 4820465846060693622}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: largebase1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 597988763107695315}
   - component: {fileID: 4231037228374545020}
   - component: {fileID: 564118039769512276}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: barrel3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 4377314657595527535}
   - component: {fileID: 6078381791079097742}
   - component: {fileID: 7752473645453226077}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: largebase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 6366286637924731238}
   - component: {fileID: 4948007160011758501}
   - component: {fileID: 5605642221856125755}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: barrel2 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -417,7 +417,7 @@ GameObject:
   - component: {fileID: 8370302150792515294}
   - component: {fileID: 8062385244401398511}
   - component: {fileID: 5063876468760114172}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: body 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -499,7 +499,7 @@ GameObject:
   - component: {fileID: 8528256400686578120}
   - component: {fileID: 3203052805618876476}
   - component: {fileID: 2982364210977823782}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: body3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -580,7 +580,7 @@ GameObject:
   - component: {fileID: 1194280784543898559}
   - component: {fileID: 7432120772215879338}
   - component: {fileID: 6354640430957273412}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: barrel4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -661,7 +661,7 @@ GameObject:
   - component: {fileID: 1755052822615590043}
   - component: {fileID: 8422050259706475972}
   - component: {fileID: 1081702994326085613}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: barrel1 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -742,7 +742,7 @@ GameObject:
   - component: {fileID: 7843973966471565845}
   - component: {fileID: 3278254782271513821}
   - component: {fileID: 1323538748815366780}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: trunnion 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -825,7 +825,7 @@ GameObject:
   - component: {fileID: 7809866091874368977}
   - component: {fileID: 7809866091874368990}
   - component: {fileID: 7809866091874368976}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Head
   m_TagString: Gun
   m_Icon: {fileID: 0}
@@ -909,7 +909,7 @@ GameObject:
   - component: {fileID: 7809866092611074465}
   - component: {fileID: 7809866092611074464}
   - component: {fileID: 7809866092611074467}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: projectilePosition2
   m_TagString: projectile
   m_Icon: {fileID: 0}
@@ -970,7 +970,7 @@ GameObject:
   - component: {fileID: 3952951864557557376}
   - component: {fileID: 2022365613407109866}
   - component: {fileID: -3284708720045858606}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cannonTransparn
   m_TagString: Gun
   m_Icon: {fileID: 0}
@@ -1046,7 +1046,7 @@ GameObject:
   - component: {fileID: 7809866092916540521}
   - component: {fileID: 7809866092916540520}
   - component: {fileID: 7809866092916540523}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GunRotation3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1103,7 +1103,7 @@ GameObject:
   - component: {fileID: 7809866093772097265}
   - component: {fileID: 7809866093772097264}
   - component: {fileID: 7809866093772097267}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: projectilePosition1
   m_TagString: projectile
   m_Icon: {fileID: 0}
